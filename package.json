@@ -1,15 +1,40 @@
 {
-  "name": "sogoodgames.github.io",
-  "version": "1.0.0",
-  "description": "Website",
+  "name": "sogood.games",
+  "private": true,
+  "description": "the So Good Games website",
+  "version": "0.1.0",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "clean": "npx rimraf node_modules/ .cache/ public/ logs/ **/__snapshots__/",
+    "deploy": "npm run build && node ./src/utility/deploy.js",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "jest"
+  },
+  "dependencies": {
+    "gatsby": "^2.3.4",
+    "gatsby-source-filesystem": "^2.0.28",
+    "gatsby-transformer-json": "^2.1.11",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
   "devDependencies": {
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.5",
-    "gulp-clean-css": "^3.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-uglify": "^2.0.1",
-    "run-sequence": "^1.2.2"
+    "babel-jest": "^24.5.0",
+    "babel-preset-gatsby": "^0.1.9",
+    "gh-pages": "^2.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.5.0",
+    "prettier": "^1.16.4",
+    "react-test-renderer": "^16.8.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sogoodgames/soil/"
+  },
+  "bugs": {
+    "url": "https://github.com/sogoodgames/soil/issues"
   }
 }
